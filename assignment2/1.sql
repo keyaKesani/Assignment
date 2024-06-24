@@ -62,6 +62,7 @@ VALUES (1, 75000.00, '2024-06-25'),
        (9, 75000.25, '2024-06-25'),
        (9, 79000.00, '2023-09-01');
 
+-- solution Query
 
 SELECT e.employee_name, d.department_name, s.salary_amount
 FROM employees AS e

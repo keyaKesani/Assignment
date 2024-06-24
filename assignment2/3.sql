@@ -1,3 +1,5 @@
+-- create the tables
+
 CREATE TABLE books (
   book_id INT PRIMARY KEY IDENTITY(1, 1),
   book_title VARCHAR(255) NOT NULL,
@@ -21,7 +23,7 @@ CREATE TABLE borrowers (
   FOREIGN KEY (book_id) REFERENCES books(book_id)
 );
 
--- populate
+-- populate the tables
 
 INSERT INTO authors (author_name, author_country)
 VALUES
@@ -53,6 +55,7 @@ VALUES
     (7, 'George Harris', '2024-06-18', '2024-07-02'),
     (8, 'Hannah King', '2024-06-20', NULL);  
 
+-- solution Query
 
 SELECT b.book_title, a.author_name, bo.borrower_name, bo.borrow_date, bo.return_date
 FROM books b

@@ -1,3 +1,5 @@
+-- create the tables
+
 CREATE TABLE students (
     student_id INT PRIMARY KEY IDENTITY(100, 1),
     student_name VARCHAR(100) NOT NULL,
@@ -70,6 +72,7 @@ VALUES
     (1008, 9.4),
     (1009, 8.9);
 
+-- solution Query
 
 SELECT c.course_name, AVG(g.grade_value) AS avg
 FROM courses c

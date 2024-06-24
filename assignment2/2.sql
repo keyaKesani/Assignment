@@ -1,3 +1,5 @@
+-- create the tables
+
 CREATE TABLE products (
   product_id INT PRIMARY KEY IDENTITY(100, 1),
   product_name VARCHAR(50) NOT NULL,
@@ -17,7 +19,8 @@ CREATE TABLE orders (
   order_date DATE NOT NULL
 );
 
--- populate the table
+-- populate the tables
+
 INSERT INTO categories (category_name)
 VALUES ('Electronics'), 
 	('Clothing'), 
@@ -65,6 +68,7 @@ VALUES
   (115, 1, '2024-06-2');
 
 
+-- solution Query
 
 WITH a AS (SELECT p.product_name, p.category_id,
 (SELECT SUM(quantity)*p.price FROM orders 

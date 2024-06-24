@@ -1,3 +1,5 @@
+-- create the tables
+
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY IDENTITY(1, 1),
     customer_name NVARCHAR(100) NOT NULL,
@@ -20,7 +22,7 @@ CREATE TABLE products (
     product_price DECIMAL(10, 2) NOT NULL
 );
 
--- populate
+-- populate the tables
 
 INSERT INTO customers (customer_name, customer_country)
 VALUES
@@ -79,6 +81,9 @@ VALUES
     (6, 109, '2024-06-18', 1),
     (7, 104, '2024-06-19', 2),
     (8, 115, '2024-06-20', 1);
+
+
+-- solution Query
 
 SELECT c.customer_country, SUM(o.order_quantity*p.product_price) AS Total_revenue
 FROM customers c
